@@ -332,7 +332,7 @@ return [
         'sqli' => [
             'enabled' => env('FIREWALL_MIDDLEWARE_SQLI_ENABLED', env('FIREWALL_ENABLED', true)),
 
-            'methods' => ['get', 'delete'],
+            'methods' => ['get', 'delete','post'],
 
             'routes' => [
                 'only' => [], // i.e. 'contact'
