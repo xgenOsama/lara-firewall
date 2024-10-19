@@ -15,6 +15,26 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+
+if (isset($_SERVER['REQUEST_URI'])) {
+
+    // This directory must be writable.
+    // We put it in the `storage/shieldon_firewall` directory.
+    $storage =  __DIR__ . '/../storage/shieldon_firewall';
+
+    $firewall = new \Shieldon\Firewall\Firewall();
+    $firewall->configure($storage);
+
+    // The base url for the control panel.
+    $firewall->controlPanel('/firewall/panel/');
+    $response = $firewall->run();
+
+    if ($response->getStatusCode() !== 200) {
+        $httpResolver = new \Shieldon\Firewall\HttpResolver();
+        $httpResolver($response);
+    }
+}
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

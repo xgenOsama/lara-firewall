@@ -1,0 +1,22 @@
+{
+    "period_data": {
+        "label_chart_string": "'13:00','14:00','15:00','16:00','17:00','18:00','19:00'",
+        "captcha_chart_string": "0,0,0,0,0,0,0",
+        "pageview_chart_string": "0,0,0,0,0,0,0",
+        "captcha_success_count": 0,
+        "captcha_failure_count": 0,
+        "captcha_count": 0,
+        "pageview_count": 0,
+        "captcha_percentageage": 0,
+        "captcha_failure_percentage": 0,
+        "captcha_success_percentage": 0,
+        "action_ban_count": 0,
+        "action_temp_ban_count": 0,
+        "action_unban_count": 0,
+        "blacklist_count": 0,
+        "session_limit_count": 0,
+        "captcha_success_chart_string": "0,0,0,0,0,0,0",
+        "captcha_failure_chart_string": "0,0,0,0,0,0,0"
+    },
+    "time": 1729369655
+}

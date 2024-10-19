@@ -408,7 +408,7 @@ return [
         'xss' => [
             'enabled' => env('FIREWALL_MIDDLEWARE_XSS_ENABLED', env('FIREWALL_ENABLED', true)),
 
-            'methods' => ['post', 'put', 'patch'],
+            'methods' => ['post', 'put', 'patch','get'],
 
             'routes' => [
                 'only' => [], // i.e. 'contact'

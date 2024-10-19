@@ -25,3 +25,11 @@ Route::group(['middleware' => 'firewall.all'], function () {
 
 });
 
+Route::any('/firewall/panel/{path?}', function() {
+
+    $panel = new \Shieldon\Firewall\Panel();
+    $panel->csrf(['_token' => csrf_token()]);
+    $panel->entry();
+
+})->where('path', '(.*)');
+
